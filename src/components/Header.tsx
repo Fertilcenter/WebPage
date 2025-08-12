@@ -13,6 +13,11 @@ export default function Header() {
     setIsMenuOpen(false); // Cerrar menú después de navegar
   };
 
+  const openWhatsApp = () => {
+    window.open('https://api.whatsapp.com/send?phone=524499993412&text=Hola%20quisiera%20saber%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios,%20as%C3%AD%20como%20donde%20puedo%20agendar%20cita.', '_blank');
+    setIsMenuOpen(false); // Cerrar menú después de navegar
+  };
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -76,7 +81,7 @@ export default function Header() {
           </button>
           {/* Botón CTA destacado */}
           <button 
-            onClick={() => scrollToSection('contacto')}
+            onClick={openWhatsApp}
             className="bg-gradient-to-r from-[#8B5A96] via-[#9C6BA9] to-[#B683C4] text-white px-3 py-1 rounded-xl hover:from-[#B683C4] hover:via-[#9C6BA9] hover:to-[#8B5A96] transition-all duration-300 font-montserrat-heavy font-semibold shadow-lg hover:shadow-xl backdrop-blur-xs border border-white/20 hover:scale-105 relative overflow-hidden group "
           >
             <span className="relative z-10 flex items-center mx-auto">
@@ -140,7 +145,7 @@ export default function Header() {
             </button>
             <div className="pt-2">
               <button 
-                onClick={() => scrollToSection('contacto')}
+                onClick={openWhatsApp}
                 className="w-full bg-gradient-to-r from-[#8B5A96] to-[#B683C4] text-white px-4 py-3 rounded-2xl hover:from-[#B683C4] hover:to-[#8B5A96] transition-all duration-300 font-medium shadow-lg hover:shadow-xl backdrop-blur-sm border border-white/15 font-montserrat-heavy text-base hover:scale-105"
               >
                 Consulta

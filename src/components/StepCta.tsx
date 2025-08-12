@@ -2,6 +2,10 @@
 import Image from "next/image";
 
 export default function StepCta() {
+  const openWhatsApp = () => {
+    window.open('https://api.whatsapp.com/send?phone=524499993412&text=Hola%20quisiera%20saber%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios,%20as%C3%AD%20como%20donde%20puedo%20agendar%20cita.', '_blank');
+  };
+
   return (
     <section className="bg-[#f6f2fa] md:py-10 md:px-4">
       <div className="max-w-5xl mx-auto md:px-0">
@@ -37,15 +41,15 @@ export default function StepCta() {
                 </div>
                               
               <div className="absolute bottom-4 right-4 z-20">
-                <a
-                  href="#milagro"
+                <button
+                  onClick={openWhatsApp}
                   className="group inline-flex items-center justify-center px-6 py-3 bg-[#FFE082] hover:bg-[#FFD700] text-[#8B5A96] font-bold text-lg rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-[#8B5A96]/20 hover:border-[#8B5A96]/40"
                 >
                   <span className="mr-2">TU MILAGRO AQUÍ</span>
                   <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </a>
+                </button>
               </div>
               </div>
 
@@ -115,11 +119,14 @@ export default function StepCta() {
                   </div>
                 </div>
           {/* Botón CTA */}
-                  <div className="mt-6 bg-yellow-200/20 backdrop-blur-xl rounded-2xl px-6 py-4 shadow-xl transform  transition-all duration-300">
+                  <button 
+                    onClick={openWhatsApp}
+                    className="mt-6 bg-yellow-200/20 backdrop-blur-xl rounded-2xl px-6 py-4 shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+                  >
                 <span className="text-[#FFE5B4] font-black text-xl drop-shadow-md">
                 TU MILAGRO AQUÍ              
                 </span>
-              </div>
+              </button>
               </div>
               
 

@@ -9,6 +9,7 @@ import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import StepCta from "@/components/StepCta";
 import Ready from "@/components/Ready";
+import FloatingButtons from "@/components/FloatingButtons";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <FinalCta />
       </main>
       <Footer />
+      <FloatingButtons />
     </>
   );
 }

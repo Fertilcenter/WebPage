@@ -2,6 +2,10 @@
 import Image from "next/image";
 
 export default function Credibility() {
+  const openWhatsApp = () => {
+    window.open('https://api.whatsapp.com/send?phone=524499993412&text=Hola%20quisiera%20saber%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios,%20as%C3%AD%20como%20donde%20puedo%20agendar%20cita.', '_blank');
+  };
+
   return (
     <section className="bg-[#f6f2fa] md:px-4 md:py-0 py-5">
  
@@ -70,7 +74,10 @@ export default function Credibility() {
               </h3>
             </div>
                       <div className="relative z-20">
-            <button className="bg-gradient-to-r from-yellow-200/60 via-yellow-300/70 to-yellow-200/60 backdrop-blur-lg border-2 border-yellow-300/40 text-[#8B5A96] px-8 py-4 rounded-2xl font-black text-lg shadow-2xl transition-all duration-500 hover:scale-110 hover:shadow-yellow-200/50 hover:backdrop-blur-xl">
+            <button 
+              onClick={openWhatsApp}
+              className="bg-gradient-to-r from-yellow-200/60 via-yellow-300/70 to-yellow-200/60 backdrop-blur-lg border-2 border-yellow-300/40 text-[#8B5A96] px-8 py-4 rounded-2xl font-black text-lg shadow-2xl transition-all duration-500 hover:scale-110 hover:shadow-yellow-200/50 hover:backdrop-blur-xl"
+            >
               AGENDA TU CONSULTA GRATIS
             </button>
           </div>
