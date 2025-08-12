@@ -38,7 +38,7 @@ SMTP_PASSWORD=abcd efgh ijkl mnop
 SMTP_HOST=smtp.sendgrid.net
 SMTP_PORT=587
 SMTP_USER=apikey
-SMTP_PASSWORD=tu_sendgrid_api_key_aqui
+SMTP_PASSWORD=SG.XXXXXXXXXXXXXXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 ### Opción 2: Mailtrap (Solo para testing)
