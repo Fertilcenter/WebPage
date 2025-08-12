@@ -1,10 +1,20 @@
 /** @type {import('next').NextConfig} */
+const isDev = process.env.NODE_ENV === 'development'
+
 const nextConfig = {
+  // Solo usar basePath en producción
+  basePath: isDev ? '' : '/webpage',
+  assetPrefix: isDev ? '' : '/webpage',
+  trailingSlash: true,
+  
   // Configuración de salida para Docker
   output: 'standalone',
   
   images: {
     domains: [],
+    // Configuración específica para subdirectorio
+    path: isDev ? '/_next/image' : '/webpage/_next/image',
+    unoptimized: true,
     // Optimización de imágenes
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
