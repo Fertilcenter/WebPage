@@ -20,6 +20,7 @@ export default function Credibility() {
                   width={200}
                   height={200}
                   className="animate-heartbeat px-12"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
               <p className="mt-5 text-2xl font-extrabold text-[#F0C260] text-center">
@@ -56,6 +57,7 @@ export default function Credibility() {
                   width={120}
                   height={120}
                   className="animate-heartbeat"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
               <p className="mt-16 text-lg font-bold text-[#8B5A96] text-center">

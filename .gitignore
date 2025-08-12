@@ -41,3 +41,6 @@ next-env.d.ts
 
 # OS generated files
 Thumbs.db
+
+# Fuentes originales (ahora están en public/fonts)
+/fonts

@@ -21,6 +21,7 @@ export default function Heartbeat() {
                 width={400}
                 height={400}
                 className="select-none pointer-events-none opacity-30 animate-heartbeat w-[500px] h-[150px] lg:w-[300px] lg:h-[200px]"
+                style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
             <span className="text-[#8B5A96] font-black">ES UN VIAJE DIFÍCIL</span>
@@ -42,7 +43,8 @@ export default function Heartbeat() {
                 width={200}
                 height={50}
                 className="object-cover object-center -scale-x-100 h-full"
-                priority
+                loading="lazy"
+                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
             <div className="relative z-10 p-6 min-h-[200px]">

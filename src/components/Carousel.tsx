@@ -176,8 +176,10 @@ export default function Carousel() {
                     src={currentSlide.src}
                     alt={currentSlide.alt}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-all duration-800"
-                    priority
+                    loading={currentIndex === 0 ? "eager" : "lazy"}
+                    priority={currentIndex === 0}
                   />
                   {/* Overlay sutil */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
@@ -204,8 +206,10 @@ export default function Carousel() {
                   src={currentSlide.src}
                   alt={currentSlide.alt}
                   fill
+                  sizes="100vw"
                   className="object-cover"
-                  priority
+                  loading={currentIndex === 0 ? "eager" : "lazy"}
+                  priority={currentIndex === 0}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 

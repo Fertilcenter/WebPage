@@ -191,6 +191,7 @@ export default function FinalCta() {
                       width={500}
                       height={700}
                       className="select-none pointer-events-none animate-heartbeat"
+                      style={{ width: 'auto', height: 'auto' }}
                     />
                   </div>
                 <div className="relative">
@@ -202,6 +203,8 @@ export default function FinalCta() {
                       width={300}
                       height={500}
                       className="transform hover:rotate-3 transition-transform duration-300 drop-shadow-2xl"
+                      style={{ width: 'auto', height: 'auto' }}
+                      loading="lazy"
                     />
                   </div>
 
@@ -233,6 +236,7 @@ export default function FinalCta() {
                   width={350}
                   height={250}
                   className="select-none pointer-events-none opacity-20 animate-heartbeat"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
               <div className="relative">
@@ -244,6 +248,8 @@ export default function FinalCta() {
                     width={200}
                     height={300}
                     className="drop-shadow-2xl"
+                    style={{ width: 'auto', height: 'auto' }}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -337,6 +343,7 @@ export default function FinalCta() {
                 width={240}
                 height={55}
                 className="mx-auto mb-8"
+                style={{ width: 'auto', height: 'auto' }}
               />
               <h4 className="font-montserrat-heavy text-2xl md:text-3xl font-bold text-white mb-8">
                 SELECCIONA PARA VER EL MAPA
@@ -427,6 +434,7 @@ export default function FinalCta() {
                 width={400}
                 height={400}
                 className="object-contain"
+                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
             
@@ -438,6 +446,7 @@ export default function FinalCta() {
                 width={200}
                 height={45}
                 className="mx-auto mb-6"
+                style={{ width: 'auto', height: 'auto' }}
               />
               
               <h4 className="font-montserrat-heavy text-2xl font-bold text-white mb-8">

@@ -29,6 +29,7 @@ export default function Header() {
             width={100}
             height={90}
             className="lg:hidden drop-shadow-sm"
+            style={{ width: 'auto', height: 'auto' }}
             priority
           />
           <Image
@@ -37,6 +38,7 @@ export default function Header() {
             width={140}
             height={92}
             className="hidden lg:block drop-shadow-md"
+            style={{ width: 'auto', height: 'auto' }}
             priority
           />
         </div>

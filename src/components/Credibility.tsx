@@ -25,6 +25,7 @@ export default function Credibility() {
                   width={170}
                   height={170}
                   className="animate-heartbeat"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
               <p className="mt-20 text-lg font-bold text-[#8B5A96] text-center">
@@ -44,6 +45,7 @@ export default function Credibility() {
                   width={120}
                   height={120}
                   className="animate-heartbeat"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
               <p className="mt-12 text-lg font-bold text-[#8B5A96] text-center">
@@ -69,8 +71,9 @@ export default function Credibility() {
                 src="/images/fondo_mama.png"
                 alt="Fondo"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover object-center"
-                priority
+                loading="lazy"
               />
             </div>
             <div className="relative z-10 p-6 min-h-[200px]">

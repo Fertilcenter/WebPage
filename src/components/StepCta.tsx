@@ -15,8 +15,9 @@ export default function StepCta() {
                 src="/images/fondo_mama.png"
                 alt="Fondo"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover object-center"
-                priority
+                loading="lazy"
               />
             </div>
             <div className="relative z-10 p-6 min-h-[200px]">
@@ -58,8 +59,9 @@ export default function StepCta() {
                 src="/images/mujer_3.png"
                 alt="Decorativo"
                 fill
+                sizes="100vw"
                 className="object-cover object-center"
-                priority
+                loading="lazy"
               />
             </div>
             

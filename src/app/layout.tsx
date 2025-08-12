@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import HydrationFix from '@/components/HydrationFix'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
@@ -31,8 +32,8 @@ export const metadata: Metadata = {
     images: ['/images/fertilcenter-og.png'],
   },
   icons: {
-    icon: '/images/fertilcenter-logo.png',
-    apple: '/images/fertilcenter-logo.png',
+    icon: '/images/logo-chico.png',
+    apple: '/images/logo-chico.png',
   },
 }
 
@@ -43,7 +44,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={inter.className + " bg-[#f6f2fa] text-[#2e204c]"}>
+      <head>
+        {/* Preload critical fonts */}
+        <link
+          rel="preload"
+          href="/fonts/FUTURA-BOOK-FONT.TTF"
+          as="font"
+          type="font/truetype"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/MONT-HEAVY.TTF"
+          as="font"
+          type="font/truetype"
+          crossOrigin="anonymous"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <meta name="format-detection" content="telephone=no" />
+      </head>
+      <body className={inter.className + " bg-[#f6f2fa] text-[#2e204c]"} suppressHydrationWarning={true}>
+        <HydrationFix />
         {children}
       </body>
     </html>

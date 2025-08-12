@@ -15,6 +15,7 @@ export default function ScienceEmotion() {
                 alt="Fertilcenter logo"
                 width={160}
                 height={45}
+                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
             
@@ -44,7 +45,8 @@ export default function ScienceEmotion() {
                 width={900}
                 height={900}
                 className="object-contain drop-shadow-2xl"
-                priority
+                loading="lazy"
+                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
           </div>
@@ -73,6 +75,7 @@ export default function ScienceEmotion() {
                   width={200}
                   height={50}
                   className="drop-shadow-lg mx-auto"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
               

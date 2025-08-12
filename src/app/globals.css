@@ -5,7 +5,7 @@
 /* Definición de fuentes personalizadas */
 @font-face {
   font-family: 'Futura';
-  src: url('/fonts/FUTURA BOOK FONT.TTF') format('truetype');
+  src: url('/fonts/FUTURA-BOOK-FONT.TTF') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: 'Futura';
-  src: url('/fonts/FUTURA BOOK ITALIC FONT.TTF') format('truetype');
+  src: url('/fonts/FUTURA-BOOK-ITALIC-FONT.TTF') format('truetype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: 'Futura';
-  src: url('/fonts/FUTURA HEAVY FONT.TTF') format('truetype');
+  src: url('/fonts/FUTURA-HEAVY-FONT.TTF') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -29,7 +29,7 @@
 
 @font-face {
   font-family: 'Futura';
-  src: url('/fonts/FUTURA HEAVY ITALIC FONT.TTF') format('truetype');
+  src: url('/fonts/FUTURA-HEAVY-ITALIC-FONT.TTF') format('truetype');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -52,17 +52,26 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Futura', sans-serif;
+  /* Optimización de renderizado */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: 'Futura', sans-serif;
   line-height: 1.6;
+  /* Optimización de contenido */
+  contain: layout style;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat Heavy', 'Futura', sans-serif;
   line-height: 1.2;
   font-weight: 300;
+  /* Optimización de texto */
+  text-rendering: optimizeLegibility;
 }
 
 /* Asegurar que todos los elementos hereden la fuente correcta */
@@ -73,6 +82,9 @@ button, input, textarea, select {
 img {
   max-width: 100%;
   height: auto;
+  /* Optimización de imágenes */
+  content-visibility: auto;
+  contain: layout;
 }
 
 /* Clases de fuentes personalizadas */

@@ -63,7 +63,6 @@ npm run dev
 ## 🖼️ Imágenes
 
 Coloca todas las imágenes necesarias en `public/images/`:
-- fertilcenter-logo.png
 - hero-mujer.png
 - latido-mujer.png
 - pareja.png

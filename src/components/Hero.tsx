@@ -31,6 +31,7 @@ export default function Hero() {
                 width={500}
                 height={500}
                 className="select-none pointer-events-none opacity-30 animate-heartbeat w-[500px] h-[150px] lg:w-[300px] lg:h-[200px]"
+                style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
             <span className="text-[#FFE082]">TE SIENTES</span>
@@ -58,7 +59,9 @@ export default function Hero() {
               priority
               style={{
                 filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))',
-                objectPosition: 'bottom'
+                objectPosition: 'bottom',
+                width: 'auto',
+                height: 'auto'
               }}
             />
           </div>
