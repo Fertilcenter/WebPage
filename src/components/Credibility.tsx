@@ -24,8 +24,8 @@ export default function Credibility() {
                   alt="Ícono corazón"
                   width={170}
                   height={170}
-                  className="animate-heartbeat"
-                  style={{ width: 'auto', height: 'auto' }}
+                  className="animate-heartbeat relative"
+                
                 />
               </div>
               <p className="mt-20 text-lg font-bold text-[#8B5A96] text-center">

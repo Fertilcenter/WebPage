@@ -61,8 +61,7 @@ html {
 body {
   font-family: 'Futura', sans-serif;
   line-height: 1.6;
-  /* Optimización de contenido */
-  contain: layout style;
+  /* Optimización de contenido - removido contain para evitar problemas con fixed */
   overflow-x: hidden;
 }
 
@@ -85,6 +84,17 @@ img {
   /* Optimización de imágenes */
   content-visibility: auto;
   contain: layout;
+}
+
+/* Asegurar que elementos fixed funcionen correctamente */
+.fixed {
+  position: fixed !important;
+}
+
+/* Asegurar que el header se mantenga siempre arriba */
+header[class*="fixed"] {
+  position: fixed !important;
+  z-index: 9999 !important;
 }
 
 /* Clases de fuentes personalizadas */

@@ -9,28 +9,21 @@ import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import StepCta from "@/components/StepCta";
 import Ready from "@/components/Ready";
-import NoSSR from "@/components/NoSSR";
 
 export default function Home() {
   return (
     <>
-      <NoSSR>
-        <Header />
-      </NoSSR>
+      <Header />
       <main>
         <Hero />
         <Heartbeat />
         <Credibility />
         <Method />
         <ScienceEmotion />
-        <NoSSR>
-          <Carousel />
-        </NoSSR>
+        <Carousel />
         <StepCta />
         <Ready />
-        <NoSSR>
-          <FinalCta />
-        </NoSSR>
+        <FinalCta />
       </main>
       <Footer />
     </>

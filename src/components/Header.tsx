@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-xs border border-white/15 shadow-xl rounded-full md:rounded-2xl z-50 px-4 md:px-6 py-2 md:py-3 before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/10 before:to-transparent before:rounded-full md:before:rounded-2xl before:pointer-events-none">
+      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-xs border border-white/15 shadow-xl rounded-full md:rounded-2xl z-[9999] px-4 md:px-6 py-2 md:py-3" style={{ position: 'fixed', zIndex: 9999 }}>
         <div className="flex items-center justify-between gap-4 md:gap-8 relative z-10">
         {/* Logo */}
         <div className="hover:scale-105 transition-all duration-300 hover:drop-shadow-lg">
@@ -89,7 +89,7 @@ export default function Header() {
       </header>
 
       {/* Menú móvil desplegable */}
-      <div className={`fixed inset-0 z-40 md:hidden transition-all duration-250 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+      <div className={`fixed inset-0 z-[9998] md:hidden transition-all duration-250 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
         {/* Overlay de fondo */}
         <div 
           className={`absolute inset-0 bg-black/30 transition-all duration-200 ${isMenuOpen ? 'opacity-100 backdrop-blur-xs' : 'opacity-0 backdrop-blur-none'}`}

@@ -104,12 +104,12 @@ export async function POST(request: NextRequest) {
     }
 
     // Configuración del transporter de nodemailer
-    console.log('Configurando transporter con:', {
-      host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT,
-      user: process.env.SMTP_USER ? 'configurado' : 'no configurado',
-      pass: process.env.SMTP_PASSWORD ? 'configurado' : 'no configurado'
-    });
+    // console.log('Configurando transporter con:', {
+    //   host: process.env.SMTP_HOST,
+    //   port: process.env.SMTP_PORT,
+    //   user: process.env.SMTP_USER ? 'configurado' : 'no configurado',
+    //   pass: process.env.SMTP_PASSWORD ? 'configurado' : 'no configurado'
+    // });
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -123,15 +123,15 @@ export async function POST(request: NextRequest) {
       tls: {
         rejectUnauthorized: false // Para desarrollo, en producción considera remover esto
       },
-      // Configuraciones adicionales para debugging
-      debug: process.env.NODE_ENV === 'development',
-      logger: process.env.NODE_ENV === 'development'
+      // Desactivar logging verboso de nodemailer
+      debug: false,
+      logger: false
     });
 
     // Ruta al PDF
     const pdfPath = path.join(process.cwd(), 'public', 'documents', 'Ebook.pdf');
     
-    console.log('Buscando PDF en:', pdfPath);
+    // console.log('Buscando PDF en:', pdfPath);
     
     // Verificar si el PDF existe
     if (!fs.existsSync(pdfPath)) {
@@ -149,10 +149,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Verificar conexión SMTP
-    console.log('Verificando conexión SMTP...');
+    // console.log('Verificando conexión SMTP...');
     try {
       await transporter.verify();
-      console.log('Conexión SMTP exitosa');
+      // console.log('Conexión SMTP exitosa');
     } catch (smtpError) {
       console.error('Error de conexión SMTP:', smtpError);
       
@@ -265,7 +265,7 @@ export async function POST(request: NextRequest) {
     await transporter.sendMail(mailOptions);
 
     // Aquí podrías guardar los datos en una base de datos si es necesario
-    console.log(`Email enviado exitosamente a: ${email}, WhatsApp: ${whatsapp}, IP: ${rateLimitResult.ip}`);
+    console.log(`✅ Email enviado exitosamente a: ${email}`);
 
     return NextResponse.json(
       { 
