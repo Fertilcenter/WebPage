@@ -18,6 +18,8 @@ services:
     volumes:
       # Persistir logs y uploads si es necesario
       - ./logs:/app/logs
+      # Configuración específica para el deployment híbrido
+      - /var/www/fertilcenter.com.mx:/var/www/fertilcenter.com.mx:ro
     networks:
       - fertilcenter-network
 
@@ -30,9 +32,11 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx-hybrid.conf:/etc/nginx/nginx.conf:ro
       - ./ssl:/etc/nginx/ssl:ro
       - /var/log/nginx:/var/log/nginx
+      # Acceso al sitio actual para servir archivos estáticos
+      - /var/www/fertilcenter.com.mx:/var/www/fertilcenter.com.mx:ro
     depends_on:
       - fertilcenter-web
     networks:

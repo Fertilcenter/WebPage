@@ -57,13 +57,17 @@ sudo npm install -g pm2
 
 ## 🐳 Deployment con Docker
 
-### 1. Clonar proyecto en servidor
+### 1. Clonar proyecto en servidor (SIN tocar la estructura actual)
 ```bash
 cd /var/www
-sudo git clone https://github.com/Fertilcenter/WebPage.git fertilcenter.com.mx
-sudo chown -R ubuntu:ubuntu fertilcenter.com.mx
-cd fertilcenter.com.mx
+sudo git clone https://github.com/Fertilcenter/WebPage.git fertilcenter-nextjs
+sudo chown -R ubuntu:ubuntu fertilcenter-nextjs
+cd fertilcenter-nextjs
 ```
+
+**NOTA IMPORTANTE**: Tu estructura actual se mantiene intacta:
+- `/var/www/fertilcenter.com.mx/index.html` (tu redirect actual)
+- `/var/www/fertilcenter-nextjs/` (nuevo proyecto Next.js)
 
 ### 2. Configurar variables de entorno
 ```bash

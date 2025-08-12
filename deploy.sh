@@ -50,6 +50,12 @@ fi
 mkdir -p logs
 mkdir -p ssl
 
+# Usar configuración híbrida por defecto (mantiene sitio actual)
+if [ ! -f "nginx.conf" ]; then
+    log "Usando configuración híbrida (mantiene tu sitio actual)"
+    cp nginx-hybrid.conf nginx.conf
+fi
+
 # Backup de la aplicación actual (si existe)
 if [ "$ENVIRONMENT" = "production" ]; then
     log "Creando backup de la aplicación actual..."
@@ -129,8 +135,9 @@ fi
 log "🎉 Deployment completado!"
 echo ""
 echo "📊 Información del deployment:"
-echo "  🌐 URL: https://$DOMAIN"
-echo "  📱 Aplicación: http://localhost:3000"
+echo "  🌐 Sitio actual: https://$DOMAIN (se mantiene funcionando)"
+echo "  🆕 Nueva web Next.js: https://$DOMAIN/nueva-web"
+echo "  📱 Aplicación directa: http://localhost:3000"
 echo "  🔧 Logs: docker-compose logs -f"
 echo "  📋 Estado: docker-compose ps"
 echo ""
@@ -139,3 +146,8 @@ echo "  Ver logs: docker-compose logs -f fertilcenter-web"
 echo "  Reiniciar: docker-compose restart"
 echo "  Detener: docker-compose down"
 echo "  Actualizar: git pull && ./deploy.sh $ENVIRONMENT"
+echo ""
+echo "🔄 Para migrar completamente:"
+echo "  1. Prueba la nueva web en: https://$DOMAIN/nueva-web"
+echo "  2. Cuando esté listo, cambia tu redirect de '/web' a '/nueva-web'"
+echo "  3. Lee MIGRATION-STRATEGY.md para más detalles"
