@@ -92,7 +92,7 @@ export default function FinalCta() {
   return (
     <>
       {/* CTA Principal */}
-      <section className="md:py-16 py-7 px-4 bg-gradient-to-br from-[#E8D5F0] via-[#F0E6F7] to-[#E8D5F0] relative overflow-hidden">
+      <section id="ebook" className="md:py-16 py-7 px-4 bg-gradient-to-br from-[#E8D5F0] via-[#F0E6F7] to-[#E8D5F0] relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
           
           {/* Versión Desktop */}

@@ -101,7 +101,7 @@ export default function Carousel() {
   const currentSlide = slides[currentIndex];
 
   return (
-    <section className="relative bg-white py-0 md:py-10 md:py-32 overflow-hidden">
+    <section id="carousel" className="relative bg-white py-0 md:py-5 md:py-32 overflow-hidden">
       {/* Background premium con patrón médico sutil */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50">
         <div className="absolute inset-0 opacity-5">

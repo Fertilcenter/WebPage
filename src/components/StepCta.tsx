@@ -9,15 +9,17 @@ export default function StepCta() {
         <div className="md:rounded-3xl relative overflow-hidden">
           
           {/* Versión Desktop */}
-          <div className="hidden md:block">
-            <div className="absolute inset-0 z-0">
+          <div className="hidden md:block bg-gradient-to-r from-[#8B5A96] to-[#7d4fa3]">
+            <div className="absolute right-20 top-0 bottom-0">
               <Image
-                src="/images/fondo_mama.png"
+              src="/images/mujer_3.png"
                 alt="Fondo"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover object-center"
+                width={1000}
+                height={200}
+                className=" object-center"
+                sizes="(max-width: 788px) 150vw, 40vw"
                 loading="lazy"
+                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
             <div className="relative z-10 p-6 min-h-[200px]">

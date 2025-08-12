@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-xs border border-white/15 shadow-xl rounded-full md:rounded-2xl z-[9999] px-4 md:px-6 py-2 md:py-3" style={{ position: 'fixed', zIndex: 9999 }}>
+      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-xs border border-white/15 shadow-xl rounded-full md:rounded-2xl z-50 px-4 md:px-6 py-2 md:py-3 before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/10 before:to-transparent before:rounded-full md:before:rounded-2xl before:pointer-events-none">
         <div className="flex items-center justify-between gap-4 md:gap-8 relative z-10">
         {/* Logo */}
         <div className="hover:scale-105 transition-all duration-300 hover:drop-shadow-lg">
@@ -29,7 +29,6 @@ export default function Header() {
             width={100}
             height={90}
             className="lg:hidden drop-shadow-sm"
-            style={{ width: 'auto', height: 'auto' }}
             priority
           />
           <Image
@@ -38,36 +37,52 @@ export default function Header() {
             width={140}
             height={92}
             className="hidden lg:block drop-shadow-md"
-            style={{ width: 'auto', height: 'auto' }}
             priority
           />
         </div>
 
-        {/* Navegación */}
-        <nav className="hidden md:flex items-center gap-6 text-sm font-futura">
+        {/* Navegación mejorada */}
+        <nav className="hidden md:flex items-center gap-4 text-base font-futura">
           <button 
             onClick={() => scrollToSection('inicio')}
-            className="text-[#FFE082] hover:text-white px-5 py-2 rounded-xl font-medium transition-all duration-300 hover:drop-shadow-lg border border-transparent hover:border-white/20"
+            className="text-gray-700 hover:text-[#8B5A96] px-4 py-2 rounded-xl font-futura font-medium text-base transition-all duration-300 hover:bg-white/20 hover:backdrop-blur-sm border border-transparent hover:border-[#8B5A96]/20 relative group drop-shadow-[0_0_5px_#FFFFFF]"
           >
-            Inicio
+            <span className="relative z-10">Inicio</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FFE082]/10 to-[#8B5A96]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
           </button>
+
           <button 
-            onClick={() => scrollToSection('diferencia')}
-            className="text-[#FFE082] hover:text-white px-3 py-2 rounded-xl font-medium transition-all duration-300 hover:drop-shadow-lg border border-transparent hover:border-white/20"
+            onClick={() => scrollToSection('carousel')}
+            className="text-gray-700 hover:text-[#8B5A96] px-4 py-2 rounded-xl font-futura font-medium text-base transition-all duration-300 hover:bg-white/20 hover:backdrop-blur-sm border border-transparent hover:border-[#8B5A96]/20 relative group drop-shadow-[0_0_5px_#FFFFFF]"
           >
-            Diferencia
+            <span className="relative z-10">Nosotros</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FFE082]/10 to-[#8B5A96]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
           </button>
+
           <button 
-            onClick={() => scrollToSection('metodo')}
-            className="text-[#FFE082] hover:text-white px-3 py-2 rounded-xl font-medium transition-all duration-300 hover:drop-shadow-lg border border-transparent hover:border-white/20"
+            onClick={() => scrollToSection('ebook')}
+            className="text-gray-700 hover:text-[#8B5A96] px-4 py-2 rounded-xl font-futura font-medium text-base transition-all duration-300 hover:bg-white/20 hover:backdrop-blur-sm border border-transparent hover:border-[#8B5A96]/20 relative group drop-shadow-[0_0_5px_#FFFFFF]"
           >
-            Método
+            <span className="relative z-10">Ebook</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FFE082]/10 to-[#8B5A96]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
           </button>
+          
           <button 
             onClick={() => scrollToSection('contacto')}
-            className="bg-gradient-to-r from-[#8B5A96] to-[#B683C4] text-[#FFE082] px-4 py-2 rounded-xl hover:from-[#B683C4] hover:to-[#8B5A96] transition-all duration-300 font-medium shadow-lg hover:shadow-xl backdrop-blur-xs border border-white/15 hover:scale-105"
+            className="text-gray-700 hover:text-[#8B5A96] px-4 py-2 rounded-xl font-futura font-medium text-base transition-all duration-300 hover:bg-white/20 hover:backdrop-blur-sm border border-transparent hover:border-[#8B5A96]/20 relative group drop-shadow-[0_0_5px_#FFFFFF]"
           >
-            Contacto
+            <span className="relative z-10">Sucursales</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FFE082]/10 to-[#8B5A96]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+          </button>
+          {/* Botón CTA destacado */}
+          <button 
+            onClick={() => scrollToSection('contacto')}
+            className="bg-gradient-to-r from-[#8B5A96] via-[#9C6BA9] to-[#B683C4] text-white px-3 py-1 rounded-xl hover:from-[#B683C4] hover:via-[#9C6BA9] hover:to-[#8B5A96] transition-all duration-300 font-montserrat-heavy font-semibold shadow-lg hover:shadow-xl backdrop-blur-xs border border-white/20 hover:scale-105 relative overflow-hidden group "
+          >
+            <span className="relative z-10 flex items-center mx-auto">
+              Consulta
+            </span>
+
           </button>
         </nav>
 
@@ -101,28 +116,34 @@ export default function Header() {
           <nav className="relative z-10 space-y-2">
             <button 
               onClick={() => scrollToSection('inicio')}
-              className="w-full text-center text-[#FFE082] px-4 py-3 rounded-2xl font-medium transition-all duration-300 hover:drop-shadow-lg border border-transparent hover:border-white/20 font-futura text-sm"
+              className="w-full text-center text-[#FFE082] px-4 py-3 rounded-2xl font-medium transition-all duration-300 hover:drop-shadow-lg border border-transparent hover:border-white/20 font-futura text-base"
             >
               Inicio
             </button>
             <button 
-              onClick={() => scrollToSection('diferencia')}
-              className="w-full text-center text-[#FFE082] px-4 py-3 rounded-2xl font-medium transition-all duration-300 hover:drop-shadow-lg border border-transparent hover:border-white/20 font-futura text-sm"
+              onClick={() => scrollToSection('carousel')}
+              className="w-full text-center text-[#FFE082] px-4 py-3 rounded-2xl font-medium transition-all duration-300 hover:drop-shadow-lg border border-transparent hover:border-white/20 font-futura text-base"
             >
-              Diferencia
+              Nosotros
             </button>
             <button 
-              onClick={() => scrollToSection('metodo')}
-              className="w-full text-center text-[#FFE082] px-4 py-3 rounded-2xl font-medium transition-all duration-300 hover:drop-shadow-lg border border-transparent hover:border-white/20 font-futura text-sm"
+              onClick={() => scrollToSection('ebook')}
+              className="w-full text-center text-[#FFE082] px-4 py-3 rounded-2xl font-medium transition-all duration-300 hover:drop-shadow-lg border border-transparent hover:border-white/20 font-futura text-base"
             >
-              Método
+              Ebook
+            </button>
+            <button 
+              onClick={() => scrollToSection('contacto')}
+              className="w-full text-center text-[#FFE082] px-4 py-3 rounded-2xl font-medium transition-all duration-300 hover:drop-shadow-lg border border-transparent hover:border-white/20 font-futura text-base"
+            >
+              Sucursales
             </button>
             <div className="pt-2">
               <button 
                 onClick={() => scrollToSection('contacto')}
-                className="w-full bg-gradient-to-r from-[#8B5A96] to-[#B683C4] text-white px-4 py-3 rounded-2xl hover:from-[#B683C4] hover:to-[#8B5A96] transition-all duration-300 font-medium shadow-lg hover:shadow-xl backdrop-blur-sm border border-white/15 font-futura text-sm hover:scale-105"
+                className="w-full bg-gradient-to-r from-[#8B5A96] to-[#B683C4] text-white px-4 py-3 rounded-2xl hover:from-[#B683C4] hover:to-[#8B5A96] transition-all duration-300 font-medium shadow-lg hover:shadow-xl backdrop-blur-sm border border-white/15 font-montserrat-heavy text-base hover:scale-105"
               >
-                Contacto
+                Consulta
               </button>
             </div>
           </nav>

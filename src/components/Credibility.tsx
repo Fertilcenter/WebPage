@@ -65,15 +65,17 @@ export default function Credibility() {
         <div className="md:rounded-3xl relative overflow-hidden">
           
           {/* Versión Desktop */}
-          <div className="hidden md:block">
-            <div className="absolute inset-0 z-0">
+          <div className="hidden md:block bg-gradient-to-r from-[#8B5A96] to-[#7d4fa3]">
+            <div className="absolute right-20 top-0 bottom-0">
               <Image
-                src="/images/fondo_mama.png"
+                src="/images/xmama.webp"
                 alt="Fondo"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover object-center"
+                width={200}
+                height={50}
+
+                className="object-cover object-center -scale-x-100 h-full"
                 loading="lazy"
+                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
             <div className="relative z-10 p-6 min-h-[200px]">
@@ -92,8 +94,8 @@ export default function Credibility() {
                 </div>
               </div>
               
-              <div className="absolute bottom-4 right-4 bg-[#FFE082]/80 rounded-lg px-4 py-2 z-20">
-                <span className="text-[#8B5A96] font-bold text-lg">
+              <div className="bg-white/20 backdrop-blur-xs rounded-2xl p-4 border border-white/30 shadow-xl animate-slide-up delay-300 transform hover:scale-105 transition-all duration-300 absolute bottom-2 right-3 bg-[#FFE082]/80 px-5 py-1">
+                <span className="text-[#FFE082] font-montserrat-heavy font-bold drop-shadow-[0_0_5px_#8B5A96]">
                   ¡15 AÑOS<br />CREANDO LATIDOS!
                 </span>
               </div>

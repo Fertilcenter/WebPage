@@ -62,8 +62,8 @@ export default function Heartbeat() {
                 </div>
               </div>
               
-              <div className="bg-white/20 backdrop-blur-md rounded-2xl p-4 border border-white/30 shadow-xl animate-slide-up delay-300 transform hover:scale-105 transition-all duration-300 absolute bottom-2 right-3 bg-[#FFE082]/80 px-8 py-1">
-                <span className="text-[#FFE082] font-montserrat-heavy font-bold ">
+              <div className="bg-white/20 backdrop-blur-xs rounded-2xl p-4 border border-white/30 shadow-xl animate-slide-up delay-300 transform hover:scale-105 transition-all duration-300 absolute bottom-2 right-3 bg-[#FFE082]/80 px-8 py-1">
+                <span className="text-[#FFE082] font-montserrat-heavy font-bold drop-shadow-[0_0_5px_#8B5A96]">
                   NO ESTÁS SOLA
                 </span>
               </div>
