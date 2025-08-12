@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Configuración de salida para Docker
+  output: 'standalone',
+  
   images: {
     domains: [],
     // Optimización de imágenes
@@ -10,16 +13,42 @@ const nextConfig = {
     dangerouslyAllowSVG: false,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  
   // Configuración para mejorar la hidratación
   experimental: {
     optimizePackageImports: ['@/components'],
   },
+  
   // Configuración para desarrollo
   reactStrictMode: false, // Temporalmente deshabilitado para reducir warnings de hidratación
+  
   // Compresión y optimización
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
+  
+  // Configuración de headers de seguridad
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+        ],
+      },
+    ];
+  },
 }
 
 module.exports = nextConfig

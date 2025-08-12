@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  fertilcenter-web:
+    build: .
+    container_name: fertilcenter-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      # Variables de entorno para email (agregar en .env.production)
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+    ports:
+      - "3000:3000"
+    volumes:
+      # Persistir logs y uploads si es necesario
+      - ./logs:/app/logs
+    networks:
+      - fertilcenter-network
+
+  # Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: fertilcenter-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+      - /var/log/nginx:/var/log/nginx
+    depends_on:
+      - fertilcenter-web
+    networks:
+      - fertilcenter-network
+
+networks:
+  fertilcenter-network:
+    driver: bridge
