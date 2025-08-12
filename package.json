@@ -1,0 +1,30 @@
+{
+  "name": "fertilcenter-landing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/nodemailer": "^6.4.17",
+    "autoprefixer": "^10.4.18",
+    "framer-motion": "^11.0.17",
+    "ioredis": "^5.7.0",
+    "next": "15.0.0",
+    "nodemailer": "^7.0.5",
+    "postcss": "^8.4.34",
+    "rate-limiter-flexible": "^7.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "redis": "^5.8.0",
+    "tailwindcss": "^3.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.48",
+    "typescript": "^5.4.5"
+  }
+}
