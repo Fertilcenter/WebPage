@@ -209,7 +209,6 @@ export default function FinalCta() {
                       width={300}
                       height={500}
                       className="transform hover:rotate-3 transition-transform duration-300 drop-shadow-2xl"
-                      style={{ width: 'auto', height: 'auto' }}
                       loading="lazy"
                     />
                   </div>
@@ -239,10 +238,9 @@ export default function FinalCta() {
                 <Image
                   src="/images/corazon_obscuro.png"
                   alt=""
-                  width={350}
+                  width={550}
                   height={250}
-                  className="select-none pointer-events-none opacity-20 animate-heartbeat"
-                  style={{ width: 'auto', height: 'auto' }}
+                  className="select-none pointer-events-none opacity-90 animate-heartbeat"
                 />
               </div>
               <div className="relative">
@@ -251,10 +249,9 @@ export default function FinalCta() {
                   <Image
                     src="/images/libro.png"
                     alt="Ebook Latido 1 - Fertilcenter"
-                    width={200}
+                    width={300}
                     height={300}
                     className="drop-shadow-2xl"
-                    style={{ width: 'auto', height: 'auto' }}
                     loading="lazy"
                   />
                 </div>
@@ -349,7 +346,6 @@ export default function FinalCta() {
                 width={240}
                 height={55}
                 className="mx-auto mb-8"
-                style={{ width: 'auto', height: 'auto' }}
               />
               <h4 className="font-montserrat-heavy text-2xl md:text-3xl font-bold text-white mb-8">
                 SELECCIONA PARA VER EL MAPA
@@ -439,7 +435,7 @@ export default function FinalCta() {
                 alt="Decorativo"
                 width={400}
                 height={400}
-                className="object-contain"
+                className="object-contain animated"
                 style={{ width: 'auto', height: 'auto' }}
               />
             </div>
@@ -452,16 +448,15 @@ export default function FinalCta() {
                 width={200}
                 height={45}
                 className="mx-auto mb-6"
-                style={{ width: 'auto', height: 'auto' }}
               />
               
-              <h4 className="font-montserrat-heavy text-2xl font-bold text-white mb-8">
+              <h4 className="font-montserrat-heavy text-xl font-bold text-white mb-8">
                 SELECCIONA PARA VER EL MAPA
               </h4>
               
               {/* Cards con efectos glassmorphism */}
               <div className="space-y-4 max-w-sm mx-auto">
-                <div className="bg-white/20 backdrop-blur-md rounded-2xl p-4 border border-white/30 shadow-xl transform transition-all duration-300">
+                <div className="bg-white/10 backdrop-blur-xs rounded-2xl p-4 shadow-xl transform transition-all duration-300">
                   <h5 className="text-white font-bold text-lg mb-3">Benjamin de La Mora</h5>
                   <div className="text-left space-y-2 text-white/90">
                     <p className="text-sm">📍 Benjamin de La Mora 527</p>
@@ -480,7 +475,7 @@ export default function FinalCta() {
                   </button>
                 </div>
                 
-                <div className="bg-white/20 backdrop-blur-md rounded-2xl p-4 border border-white/30 shadow-xl transform transition-all duration-300">
+                <div className="bg-white/10 backdrop-blur-xs rounded-2xl p-4 transform transition-all duration-300">
                   <h5 className="text-white font-bold text-lg mb-3">Lomas del Campestre</h5>
                   <div className="text-left space-y-2 text-white/90">
                     <p className="text-sm">📍 Monte Carlo 113, Lomas del Campestre II</p>
@@ -501,7 +496,7 @@ export default function FinalCta() {
                   {/* Mapa seleccionado móvil */}
               {selectedLocation && (
                 <div className="mt-6 mx-auto">
-                  <div className="bg-white/20 backdrop-blur-md rounded-2xl p-4 border border-white/30 shadow-xl transform hover:scale-20 transition-all duration-300">
+                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 transform hover:scale-20 transition-all duration-300">
                     <h6 className="text-white font-bold text-center mb-4">
                       {selectedLocation === 'benjamin' ? 'Sucursal Benjamin de La Mora' : 'Sucursal Lomas del Campestre'}
                     </h6>

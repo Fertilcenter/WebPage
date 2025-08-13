@@ -45,7 +45,6 @@ export default function Credibility() {
                   width={120}
                   height={120}
                   className="animate-heartbeat"
-                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
               <p className="mt-12 text-lg font-bold text-[#8B5A96] text-center">
@@ -72,7 +71,6 @@ export default function Credibility() {
                 alt="Fondo"
                 width={200}
                 height={50}
-
                 className="object-cover object-center -scale-x-100 h-full"
                 loading="lazy"
               />

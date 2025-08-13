@@ -269,21 +269,21 @@ export default function Carousel() {
         </div>
 
         {/* Trust indicators */}
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-5 font-montserrat-heavy text-sm">
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-5 font-montserrat-heavy">
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-[#8B5A96]">15+</div>
+            <div className="md:text-3xl text-xl  font-bold text-[#8B5A96]">15+</div>
             <div className="text-sm text-gray-600">Años de experiencia</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-[#8B5A96]">Miles de</div>
+            <div className="md:text-3xl text-xl  font-bold text-[#8B5A96]">Miles de</div>
             <div className="text-sm text-gray-600">Familias creadas</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-[#8B5A96]">Reconocidos</div>
+            <div className="md:text-3xl text-xl font-bold text-[#8B5A96]">Reconocidos</div>
             <div className="text-sm text-gray-600">A nivel mundial</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-[#8B5A96]">Especialistas</div>
+            <div className="md:text-3xl text-xl  font-bold text-[#8B5A96]">Especialistas</div>
             <div className="text-sm text-gray-600">Certificados</div>
           </div>
         </div>
