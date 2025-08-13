@@ -44,7 +44,6 @@ export default function Heartbeat() {
                 height={50}
                 className="object-cover object-center -scale-x-100 h-full"
                 loading="lazy"
-                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
             <div className="relative z-10 p-6 min-h-[200px]">

@@ -18,18 +18,16 @@ export default function StepCta() {
               <Image
               src="/images/mujer_3.png"
                 alt="Fondo"
-                width={1000}
-                height={200}
-                className=" object-center"
-                sizes="(max-width: 788px) 150vw, 40vw"
-                loading="lazy"
-                style={{ width: 'auto', height: 'auto' }}
-              />
+                width={400}
+                height={500}
+                className="object-cover object-center"
+                loading="lazy"             
+                />
             </div>
             <div className="relative z-10 p-6 min-h-[200px]">
               <div className="w-full">
                 <h4 className="text-xl font-bold mb-3 leading-tight">
-                  <span className="font-montserrat-heavy text-white">¿LISTOS PARA DAR</span><br />
+                  <span className="font-montserrat-heavy text-white">¿LISTsOS PARA DAR</span><br />
                   <span className="text-[#FFE082]">EL PRIMER PASO?</span>
                 </h4>
                 
@@ -43,7 +41,7 @@ export default function StepCta() {
               <div className="absolute bottom-4 right-4 z-20">
                 <button
                   onClick={openWhatsApp}
-                  className="group inline-flex items-center justify-center px-6 py-3 bg-[#FFE082] hover:bg-[#FFD700] text-[#8B5A96] font-bold text-lg rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-[#8B5A96]/20 hover:border-[#8B5A96]/40"
+                  className="group inline-flex items-center justify-center px-6 py-3 bg-[#FFE082] hover:bg-[#FFD700] text-[#8B5A96] font-bold text-lg rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300  hover:border-[#8B5A96]/40"
                 >
                   <span className="mr-2">TU MILAGRO AQUÍ</span>
                   <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
