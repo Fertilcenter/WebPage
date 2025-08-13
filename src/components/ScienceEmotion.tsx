@@ -75,7 +75,6 @@ export default function ScienceEmotion() {
               width={200}
               height={50}
               className="drop-shadow-lg mx-auto"
-              style={{ width: 'auto', height: 'auto' }}
             />
           </div>
               

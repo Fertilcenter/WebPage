@@ -27,7 +27,7 @@ export default function StepCta() {
             <div className="relative z-10 p-6 min-h-[200px]">
               <div className="w-full">
                 <h4 className="text-xl font-bold mb-3 leading-tight">
-                  <span className="font-montserrat-heavy text-white">¿LISTsOS PARA DAR</span><br />
+                  <span className="font-montserrat-heavy text-white">¿LISTOS PARA DAR</span><br />
                   <span className="text-[#FFE082]">EL PRIMER PASO?</span>
                 </h4>
                 

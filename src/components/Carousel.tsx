@@ -15,9 +15,9 @@ export default function Carousel() {
       src: "/images/bebe1.jpeg",
       alt: "Nuevo bebé",
       category: "ÉXITO",
-      title: "Más de 10,000 familias creadas",
+      title: "Familias creadas",
       subtitle: "Nuestros resultados hablan por sí solos",
-      stats: "97% tasa de éxito",
+      stats: "",
       cta: "Ver testimonios"
     },
     {
@@ -26,7 +26,7 @@ export default function Carousel() {
       category: "INNOVACIÓN",
       title: "Tecnología de vanguardia mundial",
       subtitle: "Equipos de última generación para mejores resultados",
-      stats: "15+ años de experiencia",
+      stats: "10+ años de experiencia",
       cta: "Conocer tecnología"
     },
     {
@@ -35,7 +35,7 @@ export default function Carousel() {
       category: "EXCELENCIA",
       title: "Especialistas reconocidos internacionalmente",
       subtitle: "El mejor equipo médico de fertilidad",
-      stats: "20+ especialistas certificados",
+      stats: "Especialistas certificados",
       cta: "Conocer equipo"
     },
     {
@@ -44,7 +44,7 @@ export default function Carousel() {
       category: "CIENCIA",
       title: "Investigación e innovación constante",
       subtitle: "Liderando el futuro de la medicina reproductiva",
-      stats: "100+ publicaciones científicas",
+      stats: "",
       cta: "Ver investigación"
     }
   ];
@@ -269,22 +269,22 @@ export default function Carousel() {
         </div>
 
         {/* Trust indicators */}
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-5">
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-5 font-montserrat-heavy text-sm">
           <div className="space-y-2">
             <div className="text-3xl font-bold text-[#8B5A96]">15+</div>
             <div className="text-sm text-gray-600">Años de experiencia</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-[#8B5A96]">10,000+</div>
+            <div className="text-3xl font-bold text-[#8B5A96]">Miles de</div>
             <div className="text-sm text-gray-600">Familias creadas</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-[#8B5A96]">97%</div>
-            <div className="text-sm text-gray-600">Tasa de éxito</div>
+            <div className="text-3xl font-bold text-[#8B5A96]">Reconocidos</div>
+            <div className="text-sm text-gray-600">A nivel mundial</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-[#8B5A96]">20+</div>
-            <div className="text-sm text-gray-600">Especialistas</div>
+            <div className="text-3xl font-bold text-[#8B5A96]">Especialistas</div>
+            <div className="text-sm text-gray-600">Certificados</div>
           </div>
         </div>
       </div>

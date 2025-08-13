@@ -2,35 +2,40 @@
 const isDev = process.env.NODE_ENV === 'development'
 
 const nextConfig = {
-  // CRÍTICO: Configuración de rutas
-  basePath: '/webpage',
-  assetPrefix: '/webpage',
+  // CRÍTICO: Configuración diferente para dev y prod
+  basePath: isDev ? '' : '/webpage',
+  assetPrefix: isDev ? '' : '/webpage',
   trailingSlash: true,
   
   output: 'standalone',
   
   // Configuración de rutas públicas
   publicRuntimeConfig: {
-    basePath: '/webpage',
+    basePath: isDev ? '' : '/webpage',
   },
   
   images: {
     unoptimized: true,
-    domains: ['www.fertilcenter.com.mx', 'fertilcenter.com.mx'],
-    // IMPORTANTE: path para imágenes con basePath
-    path: '/webpage/_next/image',
+    domains: ['www.fertilcenter.com.mx', 'fertilcenter.com.mx', 'localhost'],
+    path: isDev ? '/_next/image' : '/webpage/_next/image',
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   
-  // Rewrite para APIs
+  // Rewrite para APIs - CRÍTICO para que funcionen las rutas
   async rewrites() {
-    return [
-      {
-        source: '/webpage/api/:path*',
-        destination: '/api/:path*',
-      },
-    ];
+    if (isDev) {
+      // En desarrollo, no necesita rewrites
+      return [];
+    } else {
+      // En producción, reescribir las rutas de API
+      return [
+        {
+          source: '/webpage/api/:path*',
+          destination: '/api/:path*',
+        },
+      ];
+    }
   },
   
   experimental: {

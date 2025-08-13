@@ -12,11 +12,17 @@ export default function FinalCta() {
   const [honeypot, setHoneypot] = useState(''); // Campo honeypot para detectar bots
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null); // Estado para manejar la ubicación seleccionada
 
+  // Función para obtener la ruta correcta de la API
+  const getApiPath = (endpoint: string) => {
+    const basePath = process.env.NODE_ENV === 'production' ? '/webpage' : '';
+    return `${basePath}/api/${endpoint}`;
+  };
+
   // Obtener token de seguridad al cargar el componente
   useEffect(() => {
     const getFormToken = async () => {
       try {
-        const response = await fetch('/api/get-form-token');
+        const response = await fetch(getApiPath('get-form-token'));
         if (response.ok) {
           const data = await response.json();
           setFormToken(data.token);
@@ -35,7 +41,7 @@ export default function FinalCta() {
     setMessage('');
 
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch(getApiPath('send-email'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +63,7 @@ export default function FinalCta() {
         setWhatsapp('');
         
         // Obtener nuevo token para futuras solicitudes
-        const tokenResponse = await fetch('/api/get-form-token');
+        const tokenResponse = await fetch(getApiPath('get-form-token'));
         if (tokenResponse.ok) {
           const tokenData = await tokenResponse.json();
           setFormToken(tokenData.token);
