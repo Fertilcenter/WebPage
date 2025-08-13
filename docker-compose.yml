@@ -8,37 +8,17 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
-      # Variables de entorno para email (agregar en .env.production)
+      # Variables de entorno para email
       - SMTP_HOST=${SMTP_HOST}
       - SMTP_PORT=${SMTP_PORT}
       - SMTP_USER=${SMTP_USER}
       - SMTP_PASSWORD=${SMTP_PASSWORD}
     ports:
-      - "3000:3000"
+      # Solo exponer internamente, Apache hará el proxy
+      - "127.0.0.1:3000:3000"
     volumes:
-      # Persistir logs y uploads si es necesario
+      # Persistir logs si es necesario
       - ./logs:/app/logs
-      # Configuración específica para el deployment híbrido
-      - /var/www/fertilcenter.com.mx:/var/www/fertilcenter.com.mx:ro
-    networks:
-      - fertilcenter-network
-
-  # Nginx reverse proxy
-  nginx:
-    image: nginx:alpine
-    container_name: fertilcenter-nginx
-    restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./nginx-hybrid.conf:/etc/nginx/nginx.conf:ro
-      - ./ssl:/etc/nginx/ssl:ro
-      - /var/log/nginx:/var/log/nginx
-      # Acceso al sitio actual para servir archivos estáticos
-      - /var/www/fertilcenter.com.mx:/var/www/fertilcenter.com.mx:ro
-    depends_on:
-      - fertilcenter-web
     networks:
       - fertilcenter-network
 
