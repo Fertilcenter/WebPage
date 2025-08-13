@@ -22,20 +22,19 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   
-  // Rewrite para APIs - CRÍTICO para que funcionen las rutas
+  // CRÍTICO: Rewrite para que las imágenes funcionen
   async rewrites() {
-    if (isDev) {
-      // En desarrollo, no necesita rewrites
-      return [];
-    } else {
+    const rewrites = [];
+    
+    if (!isDev) {
       // En producción, reescribir las rutas de API
-      return [
-        {
-          source: '/webpage/api/:path*',
-          destination: '/api/:path*',
-        },
-      ];
+      rewrites.push({
+        source: '/webpage/api/:path*',
+        destination: '/api/:path*',
+      });
     }
+    
+    return rewrites;
   },
   
   experimental: {
@@ -77,6 +76,15 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/images/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400',
           },
         ],
       },
