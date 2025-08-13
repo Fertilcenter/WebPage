@@ -2,9 +2,9 @@
 const isDev = process.env.NODE_ENV === 'development'
 
 const nextConfig = {
-  // Configuración de basePath consistente
-  basePath: '/webpage',
-  assetPrefix: '/webpage',
+  // QUITAR basePath y assetPrefix porque Apache ya maneja la ruta
+  // basePath: '/webpage',  // ← COMENTAR ESTA LÍNEA
+  // assetPrefix: '/webpage', // ← COMENTAR ESTA LÍNEA
   trailingSlash: true,
   
   // Configuración de salida para Docker
@@ -12,9 +12,8 @@ const nextConfig = {
   
   images: {
     domains: ['www.fertilcenter.com.mx', 'fertilcenter.com.mx'],
-    // Path consistente con basePath
-    path: '/webpage/_next/image',
-    unoptimized: false, // Cambiar a false para mejor optimización
+    // path: '/webpage/_next/image', // ← COMENTAR ESTA LÍNEA
+    unoptimized: false,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/webp'],
@@ -23,21 +22,17 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   
-  // Configuración experimental
+  // resto de configuración igual...
   experimental: {
     optimizePackageImports: ['@/components'],
   },
   
-  // Configuración para producción
-  reactStrictMode: true, // Habilitarlo para mejor debugging
-  swcMinify: true, // Usar SWC para mejor minificación
-  
-  // Compresión y optimización
+  reactStrictMode: true,
+  swcMinify: true,
   compress: true,
   poweredByHeader: false,
-  generateEtags: true, // Habilitarlo para mejor caching
+  generateEtags: true,
   
-  // Configuración de headers de seguridad
   async headers() {
     return [
       {
@@ -61,7 +56,6 @@ const nextConfig = {
           },
         ],
       },
-      // Headers específicos para archivos estáticos
       {
         source: '/_next/static/(.*)',
         headers: [
@@ -70,17 +64,6 @@ const nextConfig = {
             value: 'public, max-age=31536000, immutable',
           },
         ],
-      },
-    ];
-  },
-  
-  // Configuración de rewrites para mejor SEO
-  async rewrites() {
-    return [
-      // Manejar rutas que no terminen en /
-      {
-        source: '/webpage/:path*',
-        destination: '/webpage/:path*/',
       },
     ];
   },
