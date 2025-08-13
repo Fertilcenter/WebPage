@@ -2,9 +2,9 @@
 const isDev = process.env.NODE_ENV === 'development'
 
 const nextConfig = {
-  // QUITAR basePath y assetPrefix porque Apache ya maneja la ruta
-  // basePath: '/webpage',  // ← COMENTAR ESTA LÍNEA
-  // assetPrefix: '/webpage', // ← COMENTAR ESTA LÍNEA
+  // RESTAURAR basePath porque Apache envía /webpage/
+  basePath: '/webpage',
+  assetPrefix: '/webpage',
   trailingSlash: true,
   
   // Configuración de salida para Docker
@@ -12,7 +12,7 @@ const nextConfig = {
   
   images: {
     domains: ['www.fertilcenter.com.mx', 'fertilcenter.com.mx'],
-    // path: '/webpage/_next/image', // ← COMENTAR ESTA LÍNEA
+    path: '/webpage/_next/image',
     unoptimized: false,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -22,7 +22,6 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   
-  // resto de configuración igual...
   experimental: {
     optimizePackageImports: ['@/components'],
   },
