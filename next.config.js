@@ -2,18 +2,35 @@
 const isDev = process.env.NODE_ENV === 'development'
 
 const nextConfig = {
+  // CRÍTICO: Configuración de rutas
   basePath: '/webpage',
   assetPrefix: '/webpage',
   trailingSlash: true,
   
   output: 'standalone',
   
+  // Configuración de rutas públicas
+  publicRuntimeConfig: {
+    basePath: '/webpage',
+  },
+  
   images: {
-    // SOLUCIÓN: Deshabilitar optimización
     unoptimized: true,
     domains: ['www.fertilcenter.com.mx', 'fertilcenter.com.mx'],
+    // IMPORTANTE: path para imágenes con basePath
+    path: '/webpage/_next/image',
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },
+  
+  // Rewrite para APIs
+  async rewrites() {
+    return [
+      {
+        source: '/webpage/api/:path*',
+        destination: '/api/:path*',
+      },
+    ];
   },
   
   experimental: {
