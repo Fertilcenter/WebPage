@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export default function StepCta() {
   const openWhatsApp = () => {
-    window.open('https://api.whatsapp.com/send?phone=524499993412&text=Hola%20quisiera%20saber%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios,%20as%C3%AD%20como%20donde%20puedo%20agendar%20cita.', '_blank');
+    window.open(
+      'https://api.whatsapp.com/send?phone=524499993412&text=Hola%20quisiera%20agendar%20una%20cita,%20me%20puede%20dar%20informes%20por%20favor!.',
+      '_blank'
+    )
   };
 
   return (
