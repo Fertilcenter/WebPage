@@ -3,6 +3,29 @@
 Landing page inspirada en la campaña "Sabemos cómo te sientes" para Fertilcenter, creada desde cero con Next.js 15, TypeScript, TailwindCSS y Framer Motion.
 
 ---
+## Proceso para dar de alta en EC2
+  Tomando en cuenta de que actualmente está activo, debemos de eliminar el contenedor actual dentro de /var/www/fertilcenter.com.mx/webpage
+  1. Entrar a la instancia por AWS EC2
+  Entrar a la ruta del proyecto webpage
+  2. /var/www/fertilcenter.com.mx/webpage
+  Detener el contenedor actual
+  3. docker-compose down
+  Eliminar docker anterior
+  4. docker rmi $(docker images -aq) --force
+  Eliminar residuos
+  5. docker system prune -f
+  Hacer pull de los cambios en caso de que haya
+  6. git pull origin main
+  Construir el contenedor
+  7. docker-compose build --no-cache fertilcenter-web
+  Levantar el contenedor
+  8. docker-compose up -d fertilcenter-web
+
+  NOTAS: Archivos de configuración importantes
+  - next.config.js (configuración de Next.js) - Este archivo es crucial para la configuración del proyecto Next.js.
+  - nginx.conf (configuración de Nginx) - Este archivo es crucial para la configuración del servidor web.
+  - docker-compose.yml (configuración de Docker Compose) - Este archivo es crucial para definir los servicios, volúmenes y redes.
+  - /etc/apache2/sites-available/fertilcenter.com.mx.conf - Este archivo es importante para la configuración del dominio y el proxy inverso.
 
 ## 🚀 Tecnologías
 
@@ -62,15 +85,7 @@ npm run dev
 
 ## 🖼️ Imágenes
 
-Coloca todas las imágenes necesarias en `public/images/`:
-- hero-mujer.png
-- latido-mujer.png
-- pareja.png
-- cta-mujer.png
-- embrión.png
-- laboratorio-1.png, laboratorio-2.png, laboratorio-3.png
-- familia.png
+Coloca todas las imágenes necesarias en `public/images/`
 
----
 
-**Desarrollado desde cero para Fertilcenter**
+**Desarrollado por Fertilcenter**

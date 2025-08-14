@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-xs border border-white/15 shadow-xl rounded-full md:rounded-2xl z-50 px-4 md:px-6 py-2 md:py-3 before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/10 before:to-transparent before:rounded-full md:before:rounded-2xl before:pointer-events-none">
+      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-xs shadow-xl rounded-full md:rounded-2xl z-50 px-4 md:px-6 py-2 md:py-3 before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/10 before:to-transparent before:rounded-full md:before:rounded-2xl before:pointer-events-none">
         <div className="flex items-center justify-between gap-4 md:gap-8 relative z-10">
         {/* Logo */}
         <div className="hover:scale-105 transition-all duration-300 hover:drop-shadow-lg">
@@ -47,12 +47,12 @@ export default function Header() {
         </div>
 
         {/* Navegación mejorada */}
-        <nav className="hidden md:flex items-center gap-4">
+        <nav className="hidden md:flex items-center gap-4 ">
           <button 
             onClick={() => scrollToSection('inicio')}
             className="text-gray-700 hover:text-[#8B5A96] px-4 py-2 rounded-xl font-montserrat-heavy text-sm transition-all duration-300 hover:bg-white/20 hover:backdrop-blur-sm border border-transparent hover:border-[#8B5A96]/20 relative group drop-shadow-[0_0_5px_#FFFFFF]"
           >
-            <span className="relative">Inicio</span>
+            <span className="relative text-[#FFE082] ">Inicio</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#FFE082]/10 to-[#8B5A96]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
           </button>
 
@@ -60,7 +60,7 @@ export default function Header() {
             onClick={() => scrollToSection('carousel')}
             className="text-gray-700 hover:text-[#8B5A96] px-4 py-2 rounded-xl font-montserrat-heavy text-sm transition-all duration-300 hover:bg-white/20 hover:backdrop-blur-sm border border-transparent hover:border-[#8B5A96]/20 relative group drop-shadow-[0_0_5px_#FFFFFF]"
           >
-            <span className="relative z-10">Nosotros</span>
+            <span className="relative z-10 text-[#FFE082]">Nosotros</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#FFE082]/10 to-[#8B5A96]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
           </button>
 
@@ -68,7 +68,7 @@ export default function Header() {
             onClick={() => scrollToSection('ebook')}
             className="text-gray-700 hover:text-[#8B5A96] px-4 py-2 rounded-xl font-montserrat-heavy text-sm transition-all duration-300 hover:bg-white/20 hover:backdrop-blur-sm border border-transparent hover:border-[#8B5A96]/20 relative group drop-shadow-[0_0_5px_#FFFFFF]"
           >
-            <span className="relative z-10">Ebook</span>
+            <span className="relative z-10 text-[#FFE082]">Ebook</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#FFE082]/10 to-[#8B5A96]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
           </button>
           
@@ -76,15 +76,15 @@ export default function Header() {
             onClick={() => scrollToSection('contacto')}
             className="text-gray-700 hover:text-[#8B5A96] px-4 py-2 rounded-xl font-montserrat-heavy text-sm transition-all duration-300 hover:bg-white/20 hover:backdrop-blur-sm border border-transparent hover:border-[#8B5A96]/20 relative group drop-shadow-[0_0_5px_#FFFFFF]"
           >
-            <span className="relative z-10">Sucursales</span>
+            <span className="relative z-10 text-[#FFE082]">Sucursales</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#FFE082]/10 to-[#8B5A96]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
           </button>
           {/* Botón CTA destacado */}
           <button 
             onClick={openWhatsApp}
-            className=" text-white px-3 py-1 rounded-xl hover:from-[#B683C4] hover:via-[#9C6BA9] hover:to-[#8B5A96] transition-all duration-300 font-montserrat-heavy text-xs shadow-lg hover:shadow-xl backdrop-blur-xs  hover:scale-105 "
+            className=" text-white px-3 py-1 rounded-xl hover:from-[#B683C4] hover:via-[#9C6BA9] hover:to-[#8B5A96] transition-all duration-300 font-montserrat-heavy text-xs shadow-lg hover:shadow-xl backdrop-blur-xs border border-purple/20  hover:scale-105 "
           >
-            <span className="relative flex items-center mx-auto">
+            <span className="relative flex items-center mx-auto text-[#FFE082] ">
               Consulta
             </span>
 
