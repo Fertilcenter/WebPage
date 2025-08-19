@@ -3,53 +3,51 @@ import Image from "next/image";
 
 export default function ScienceEmotion() {
   return (
-    <section className="bg-gradient-to-t from-[#F6F2FA] to-[#926CB2] md:py-0">
+    <section className="bg-gradient-to-l from-[#F6F2FA] to-[#9F5DC7] md:py-0 md:p-5">
       
       {/* Versión Desktop Mejorada */}
-      <div className="hidden md:block px-6 py-10">
+      <div className="hidden md:block ">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           
           {/* Columna de texto */}
-          <div className="text-left animate-fadeIn">
+          <div className="text-left">
             {/* Logo */}
-            <div className="mb-8">
+            <div className="mb-10">
               <Image
                 src="/images/logotipo_blanco.png"
                 alt="Fertilcenter logo"
-                width={180}
+                width={380}
                 height={50}
                 className="drop-shadow-lg"
-                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
             
             {/* Título principal */}
-            <h3 className="text-5xl font-montserrat-heavy font-bold text-white mb-8 leading-snug">
+            <h3 className="text-5xl font-montserrat-heavy font-bold text-white xl:mb-8 leading-snug">
               NO ES SOLO CIENCIA<br />
               NO ES SOLO EMOCIÓN<br />
               <span className="text-[#FFE082]">ES LA FUSIÓN DE AMBAS</span>
             </h3>
             
             {/* Texto secundario */}
-            <p className="text-lg font-futura text-[#FFE082] leading-relaxed max-w-md mb-6 drop-shadow-[0_0_5px_#8B5A96]">
+            <p className="text-2xl font-futura text-[#FFE082] leading-relaxed max-w-md mb-6 drop-shadow-[0_0_5px_#8B5A96]">
               Cada día sin actuar es un día menos para abrazar la familia que mereces.
             </p>
             
-            <p className="text-xl font-montserrat-heavy font-bold text-[#8B5A96] tracking-wide">
+            <p className="text-2xl font-montserrat-heavy font-bold text-[#FFE082] tracking-wide">
               DONDE TUS SUEÑOS APRENDEN A LATIR.
             </p>
           </div>
 
           {/* Columna imagen */}
-          <div className="flex justify-center animate-slideInRight delay-200">
+          <div className="flex justify-center delay-200 md:mt-20">
             <Image
-              src="/images/familia.png"
+              src="/images/familia2.png"
               alt="Familia feliz"
-              width={850}
-              height={850}
-              className="object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105"
+              width={450}
+              height={450}
+              className="object-contain drop-shadow-2xl transition-transform duration-500"
               loading="lazy"
-              style={{ width: 'auto', height: 'auto' }}
             />
           </div>
         </div>
@@ -63,7 +61,7 @@ export default function ScienceEmotion() {
             alt="Decorativo"
             width={600}
             height={600}
-            className="object-contain"
+            className="object-contain "
           />
         </div>
         
