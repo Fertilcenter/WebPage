@@ -57,7 +57,7 @@ export default function ScienceEmotion() {
       <div className="md:hidden relative p-2 overflow-hidden ">
         <div className="absolute inset-0 flex items-center justify-center opacity-50 z-0">
           <Image
-            src="/images/familia.png"
+            src="/images/familia2.png"
             alt="Decorativo"
             width={600}
             height={600}
@@ -98,7 +98,7 @@ export default function ScienceEmotion() {
                 </div>
                 
                 <div className="text-center relative z-10">
-                  <span className="text-[#8B5A96] font-black text-xl leading-tight tracking-wide">
+                  <span className="text-[#8B5A96] font-black text-xl leading-tight tracking-wide drop-shadow-[0_0_20px_#FFE082]">
                     NO ESTÁS SOLA <br /> EN ESTE VIAJE
                   </span>
                 </div>

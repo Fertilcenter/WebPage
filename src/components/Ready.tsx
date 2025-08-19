@@ -41,14 +41,21 @@ export default function Credibility() {
                   Imagina el día en que escuches por primera vez a tu bebé. <br /> Esa emoción existe y está más cerca de lo que crees.
               </h3>
             </div>
-              <div className="relative z-10">
-                <a
-                  href="#milagro"
-                  className="inline-block mt-8 bg-gradient-to-r from-yellow-200/60 via-yellow-300/70 to-yellow-200/60 backdrop-blur-lg border-2 border-yellow-300/40 rounded-2xl px-8 py-4 shadow-2xl transform transition-all duration-500 hover:scale-110 hover:shadow-yellow-200/50 hover:backdrop-blur-xl"
-                >
-                  <span className="text-[#8B5A96] font-black text-lg drop-shadow-md">INICIA TU LATIDO</span>
-                </a>
-              </div>
+              <button 
+                onClick={openWhatsApp}
+                className="group inline-flex items-center justify-center px-10 py-3 bg-[#FFE082] hover:bg-[#FFD700] text-[#8B5A96] font-bold text-2xl rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:border-[#8B5A96]/40"
+              >
+                <span className="text-[#8B5A96] mt-1">
+                  INICIA TU LATIDO            
+                </span>
+                                <Image
+                  src="/images/whatsapp.png"
+                  alt="WhatsApp"
+                  width={30}
+                  height={30}
+                  className="ml-5"
+                />
+              </button>
 
           </div>
 
@@ -77,12 +84,21 @@ export default function Credibility() {
               </h3>
             </div>
                       <div className="relative z-20">
-            <button 
-              onClick={openWhatsApp}
-              className="bg-gradient-to-r from-yellow-200/60 via-yellow-300/70 to-yellow-200/60 backdrop-blur-lg border-2 border-yellow-300/40 text-[#8B5A96] px-8 py-4 rounded-2xl font-black text-lg shadow-2xl transition-all duration-500 hover:scale-110 hover:shadow-yellow-200/50 hover:backdrop-blur-xl"
-            >
-              AGENDA TU CONSULTA GRATIS
-            </button>
+              <button 
+                onClick={openWhatsApp}
+                className="group inline-flex items-center justify-center px-10 py-3 bg-[#FFE082] hover:bg-[#FFD700] text-[#8B5A96] font-bold text-2xl rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:border-[#8B5A96]/40"
+              >
+                <span className="text-[#8B5A96] mt-1">
+                  AGENDA TU CONSULTA GRATIS           
+                </span>
+                                <Image
+                  src="/images/whatsapp.png"
+                  alt="WhatsApp"
+                  width={30}
+                  height={30}
+                  className="ml-5"
+                />
+              </button>
           </div>
           </div>
         </div>

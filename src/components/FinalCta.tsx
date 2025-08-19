@@ -357,7 +357,7 @@ export default function FinalCta() {
                 <h5 className="font-bold text-xl mb-4 text-center">Benjamin de La Mora</h5>
                 <p className="mb-3">📍 Benjamin de La Mora 527</p>
                 <p className="mb-3">Col del Carmen, 20050 Aguascalientes, Ags.</p>
-                <p className="font-bold text-lg mb-4">📞 (449) 999 3412</p>
+                <p className="font-bold text-lg mb-4">📞 <a href="tel:+524499993412" className="hover:underline">(449) 999 3412</a></p>
                 <button 
                   onClick={() => handleLocationSelect('benjamin')}
                   className={`w-full font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 ${
@@ -374,7 +374,7 @@ export default function FinalCta() {
                 <h5 className="font-bold text-xl mb-4 text-center">Lomas del Campestre</h5>
                 <p className="mb-3">📍 Monte Carlo 113, Lomas del Campestre II</p>
                 <p className="mb-3">20119 Aguascalientes, Ags.</p>
-                <p className="font-bold text-lg mb-4">📞 (449) 162 8818</p>
+                <p className="font-bold text-lg mb-4">📞 <a href="tel:+524491628818" className="hover:underline">(449) 162 8818</a></p>
                 <button 
                   onClick={() => handleLocationSelect('campestre')}
                   className={`w-full font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 ${
@@ -461,7 +461,7 @@ export default function FinalCta() {
                   <div className="text-left space-y-2 text-white/90">
                     <p className="text-sm">📍 Benjamin de La Mora 527</p>
                     <p className="text-sm">Col del Carmen, 20050 Aguascalientes</p>
-                    <p className="font-bold">📞 (449) 999 3412</p>
+                    <p className="font-bold">📞 <a href="tel:+524499993412" className="hover:underline">(449) 999 3412</a></p>
                   </div>
                   <button 
                     onClick={() => handleLocationSelect('benjamin')}
@@ -480,7 +480,7 @@ export default function FinalCta() {
                   <div className="text-left space-y-2 text-white/90">
                     <p className="text-sm">📍 Monte Carlo 113, Lomas del Campestre II</p>
                     <p className="text-sm">20119 Aguascalientes, Ags.</p>
-                    <p className="font-bold">📞 (449) 162 8818</p>
+                    <p className="font-bold">📞 <a href="tel:+524491628818" className="hover:underline">(449) 162 8818</a></p>
                   </div>
                   <button 
                     onClick={() => handleLocationSelect('campestre')}
@@ -514,7 +514,7 @@ export default function FinalCta() {
                         />
                       ) : (
                         <iframe 
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4303.666054809503!2d-102.31841268865283!3d21.924969556310664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ef7b08109c03%3A0xb8731ab94f5714f4!2sFertil%20Center%20Norte%20Cl%C3%ADnica%20de%20Reproducci%C3%B3n%20en%20Aguascalientes!5e1!3m2!1ses-419!2smx!4v1754947559585!5m2!1ses-419!2smx"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4303.666054809503!2d-102.31841268865283!3d21.924969556310664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ef7b08109c03%3A0xb8731ab94f5714f4!2eFertil%20Center%20Norte%20Cl%C3%ADnica%20de%20Reproducci%C3%B3n%20en%20Aguascalientes!5e1!3m2!1ses-419!2smx!4v1754947559585!5m2!1ses-419!2smx"
                           width="100%" 
                           height="250" 
                           style={{border: 0}} 
