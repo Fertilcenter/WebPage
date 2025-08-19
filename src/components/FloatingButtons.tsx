@@ -31,11 +31,11 @@ export default function FloatingButtons() {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="w-7 h-7 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center backdrop-blur-sm bg-white/20 backdrop-blur-xs"
+          className="w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center backdrop-blur-sm bg-white/20 backdrop-blur-xs"
           aria-label="Ir al inicio"
         >
           <svg 
-            className="w-6 h-6" 
+            className="w-10 h-10" 
             fill="none" 
             stroke="#8B5A96" 
             viewBox="0 0 24 24"
@@ -53,7 +53,7 @@ export default function FloatingButtons() {
       {/* Botón WhatsApp */}
       <button
         onClick={openWhatsApp}
-        className="w-7 h-7 bg-[#25D366] hover:bg-[#20c55b] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center backdrop-blur-sm"
+        className="w-14 h-14 bg-[#25D366] hover:bg-[#20c55b] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center backdrop-blur-sm"
         aria-label="Contactar por WhatsApp"
       >
         <Image

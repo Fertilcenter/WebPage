@@ -12,25 +12,25 @@ export default function Carousel() {
   // Contenido premium para clínica de fertilidad de clase mundial
   const slides = [
     {
-      src: "/images/bebe1.jpeg",
+      src: "/images/fam.jpg",
       alt: "Nuevo bebé",
       category: "ÉXITO",
       title: "Familias creadas",
       subtitle: "Nuestros resultados hablan por sí solos",
-      stats: "",
+      stats: "Creando latidos",
       cta: "Ver testimonios"
     },
     {
-      src: "/images/mujer_3.png", 
+      src: "/images/lab.jpg", 
       alt: "Tecnología avanzada",
       category: "INNOVACIÓN",
       title: "Tecnología de vanguardia mundial",
       subtitle: "Equipos de última generación para mejores resultados",
-      stats: "10+ años de experiencia",
+      stats: "15+ años de experiencia",
       cta: "Conocer tecnología"
     },
     {
-      src: "/images/familia.png",
+      src: "/images/Nace.jpg",
       alt: "Equipo médico",
       category: "EXCELENCIA",
       title: "Especialistas reconocidos internacionalmente",
@@ -39,12 +39,12 @@ export default function Carousel() {
       cta: "Conocer equipo"
     },
     {
-      src: "/images/mama_red.webp",
+      src: "/images/lab2.jpg",
       alt: "Investigación",
       category: "CIENCIA",
       title: "Investigación e innovación constante",
       subtitle: "Liderando el futuro de la medicina reproductiva",
-      stats: "",
+      stats: "La mejor tecnología nos acompaña",
       cta: "Ver investigación"
     }
   ];
