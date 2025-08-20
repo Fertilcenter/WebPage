@@ -7,7 +7,7 @@ import HydrationFix from '@/components/HydrationFix'
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fertilcenter.com'),
+  metadataBase: new URL('https://www.fertilcenter.com.mx'),
   title: {
     default: 'Fertilcenter - Latidos',
     template: '%s | Fertilcenter'
