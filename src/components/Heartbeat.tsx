@@ -10,14 +10,13 @@ export default function Heartbeat() {
           {/* Versión móvil */}
           <div className="flex flex-col items-center md:hidden relative">
             {/* Imagen de fondo */}
-            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30 animate-heartbeat pointer-events-none select-none z-0">
+            <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30 animate-heartbeat pointer-events-none select-none z-0">
               <Image
                 src="/images/corazon_completo.png"
                 alt="Corazón decorativo"
                 width={400}
                 height={400}
                 className="w-[250px] h-[250px] lg:w-[300px] lg:h-[300px]"
-                style={{ width: "auto", height: "auto" }}
               />
             </div>
 
@@ -43,7 +42,7 @@ export default function Heartbeat() {
 
               {/* Imagen mujer pegada al fondo */}
               <Image
-                src="/images/mujer_2.png"
+                src="/images/mujer_2x.webp"
                 alt="Mujer"
                 width={500}
                 height={700}

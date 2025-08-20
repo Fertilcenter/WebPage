@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ScienceEmotion() {
   return (
-    <section className="bg-gradient-to-l from-[#F6F2FA] to-[#9F5DC7] md:py-0 md:p-5">
+    <section className="bg-gradient-to-l from-[#F6F2FA] to-[#9F5DC7] md:py-0 md:p-8">
       
       {/* Versión Desktop Mejorada */}
       <div className="hidden md:block ">
@@ -42,7 +42,7 @@ export default function ScienceEmotion() {
           {/* Columna imagen */}
           <div className="flex justify-center delay-200 md:mt-20">
             <Image
-              src="/images/familia2.png"
+              src="/images/familia2.webp"
               alt="Familia feliz"
               width={450}
               height={450}
@@ -57,7 +57,7 @@ export default function ScienceEmotion() {
       <div className="md:hidden relative p-2 overflow-hidden ">
         <div className="absolute inset-0 flex items-center justify-center opacity-50 z-0">
           <Image
-            src="/images/familia2.png"
+            src="/images/familia2.webp"
             alt="Decorativo"
             width={600}
             height={600}
@@ -84,7 +84,7 @@ export default function ScienceEmotion() {
           
           <div className="space-y-3">
             <div className="p-4 mb-5">
-              <p className="text-2xl font-futura font-bold  drop-shadow-[0_0_20px_#8B5A96] text-white">
+              <p className="text-2xl font-montserrat-heavy  font-bold  drop-shadow-[0_0_20px_#8B5A96] text-white">
                 Actúa hoy <br /> <span className="text-3xl text-[#FFE082]">Abraza más fuerte mañana</span>
               </p>
             </div>
