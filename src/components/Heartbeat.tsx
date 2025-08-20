@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Heartbeat() {
   return (
     <section className="font-montserrat-heavy relative md:text-left md:bg-none md:px-4 md:mt-20">
-      <div className="max-w-6xl w-[90%] mx-auto md:px-0">
+      <div className="max-w-6xl md:w-[90%] mx-auto md:px-0">
         {/* Título principal con ícono */}
         <div className="text-center md:mt-8">
           {/* Versión móvil */}
@@ -22,7 +22,7 @@ export default function Heartbeat() {
             </div>
 
             {/* Texto arriba en móvil */}
-            <h1 className="mt-12 font-montserrat-heavy text-4xl lg:text-6xl xl:text-7xl text-[#F0C260] mb-6 relative leading-tight px-4 z-10">
+            <h1 className="mt-12 font-montserrat-heavy text-4xl lg:text-6xl xl:text-7xl text-[#FFE082] mb-6 relative leading-tight px-4 z-10 ">
               BUSCAR UN BEBÉ
               <br />
               <span className="text-[#8B5A96] font-black block">

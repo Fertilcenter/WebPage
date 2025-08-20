@@ -29,7 +29,7 @@ export default function Credibility() {
                   className="animate-heartbeat px-12"
                 />
               </div>
-              <p className="mt-5 text-2xl font-extrabold text-[#F0C260] text-center">
+              <p className="mt-5 text-3xl font-extrabold text-[#F0C260] text-center">
                 ¿ESTÁS LISTA PARA DECIRLE <br />
               <span className="text-[#8B5A96]">SÍ A TU SUEÑO?</span>
 
@@ -37,7 +37,7 @@ export default function Credibility() {
             </div>
             {/* Texto aAB en móvil */}
             <div className="relative z-10 text-left">
-              <h3 className="mt-10 text-2xl md:text-3xl font-bold text-[#8B5A96] leading-tight text-center drop-shadow-sm p-2">
+              <h3 className="mt-2 text-xl md:text-3xl font-bold text-[#8B5A96] leading-tight text-center drop-shadow-sm p-2">
                   Imagina el día en que escuches por primera vez a tu bebé. <br /> Esa emoción existe y está más cerca de lo que crees.
               </h3>
             </div>
@@ -45,7 +45,7 @@ export default function Credibility() {
                 onClick={openWhatsApp}
                 className="group inline-flex items-center justify-center px-10 py-3 bg-[#FFE082] hover:bg-[#FFD700] text-[#8B5A96] font-bold text-2xl rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:border-[#8B5A96]/40"
               >
-                <span className="text-[#8B5A96] mt-1">
+                <span className="text-[#8B5A96] font-montserrat-heavy">
                   INICIA TU LATIDO            
                 </span>
                                 <Image
@@ -72,15 +72,15 @@ export default function Credibility() {
                   className="animate-heartbeat"
                 />
               </div>
-              <p className="mt-16 text-lg font-bold text-[#8B5A96] text-center">
+              <p className="mt-16 text-xl font-bold text-[#8B5A96] text-center">
                 ¿ESTÁS LISTA PARA DECIRLE <br />SÍ A TU SUEÑO?
               </p>
             </div>
 
             {/* Texto a la derecha del corazón */}
             <div className="text-left">
-              <h3 className="text-2xl md:text-3xl font-extrabold text-[#8B5A96] leading-tight">
-                  Imagina el día en que escuches por primera vez a tu bebé. <br /> Esa emoción existe y está más cerca de lo que crees.
+              <h3 className="text-2xl md:text-3xl font-extrabold text-[#8B5A96] leading-tight text-center">
+                  Imagina el día en que escuches <br /><span className="text-[#F0C260]">por primera vez a tu bebé.</span> <br /> Esa emoción existe y está más <span className="text-[#F0C260]"> cerca de lo que crees.</span>
               </h3>
             </div>
                       <div className="relative z-20">

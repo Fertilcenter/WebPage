@@ -98,7 +98,7 @@ export default function FinalCta() {
   return (
     <>
       {/* CTA Principal */}
-      <section id="ebook" className="md:py-16 py-7 px-4 bg-gradient-to-br from-[#E8D5F0] via-[#F0E6F7] to-[#E8D5F0] relative overflow-hidden">
+      <section id="ebook" className="md:py-16 py-7 px-20 bg-gradient-to-br from-[#E8D5F0] via-[#F0E6F7] to-[#E8D5F0] relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
           
           {/* Versión Desktop */}
@@ -222,7 +222,7 @@ export default function FinalCta() {
           <div className="md:hidden text-center">
             <h3 className="text-2xl font-bold mb-6">
               <span className="text-[#8B5A96]">REGÍSTRATE HOY</span><br />
-              <span className="text-[#FFE5B4] drop-shadow-[0_0_5px_#8B5A96]">Y RECIBE UN REGALO</span><br />
+              <span className="text-[#FFE082] drop-shadow-[0_0_5px_#8B5A96]">Y RECIBE UN REGALO</span><br />
               <span className="text-[#8B5A96]">ESPECIAL PARA TI</span>
             </h3>
             
@@ -347,40 +347,40 @@ export default function FinalCta() {
                 height={55}
                 className="mx-auto mb-8"
               />
-              <h4 className="font-montserrat-heavy text-2xl md:text-3xl font-bold text-white mb-8">
-                SELECCIONA PARA VER EL MAPA
+              <h4 className="font-montserrat-heavy text-4xl font-bold text-[#FFE082] mb-8 relativez-20 animate-heartbeat">
+                UBICA TU LATIDO
               </h4>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 text-[#8B5A96] shadow-xl">
-                <h5 className="font-bold text-xl mb-4 text-center">Benjamin de La Mora</h5>
+              <div className="font-montserrat-heavy bg-white/90 backdrop-blur-sm rounded-2xl p-6 text-[#8B5A96] shadow-xl">
+                <h5 className="text-xl mb-4 text-center">Benjamin de La Mora</h5>
                 <p className="mb-3">📍 Benjamin de La Mora 527</p>
                 <p className="mb-3">Col del Carmen, 20050 Aguascalientes, Ags.</p>
-                <p className="font-bold text-lg mb-4">📞 <a href="tel:+524499993412" className="hover:underline">(449) 999 3412</a></p>
+                <p className="font-bold text-xl mb-4">📞 <a href="tel:+524499993412" className="hover:underline">(449) 999 3412</a></p>
                 <button 
                   onClick={() => handleLocationSelect('benjamin')}
                   className={`w-full font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 ${
                     selectedLocation === 'benjamin' 
                       ? 'bg-[#FFE082] text-[#8B5A96] border-2 border-[#8B5A96]' 
-                      : 'bg-[#8B5A96] hover:bg-[#7a4f85] text-white'
+                      : 'bg-[#FFE082] hover:bg-[#FFE082] text-[#8B5A96]'
                   }`}
                 >
                   {selectedLocation === 'benjamin' ? 'Ocultar mapa' : 'Ver en mapa'}
                 </button>
               </div>
               
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 text-[#8B5A96] shadow-xl">
-                <h5 className="font-bold text-xl mb-4 text-center">Lomas del Campestre</h5>
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 text-[#8B5A96] shadow-xl font-montserrat-heavy ">
+                <h5 className="text-xl mb-4 text-center">Lomas del Campestre</h5>
                 <p className="mb-3">📍 Monte Carlo 113, Lomas del Campestre II</p>
                 <p className="mb-3">20119 Aguascalientes, Ags.</p>
-                <p className="font-bold text-lg mb-4">📞 <a href="tel:+524491628818" className="hover:underline">(449) 162 8818</a></p>
+                <p className="font-bold text-xl mb-4">📞 <a href="tel:+524491628818" className="hover:underline">(449) 162 8818</a></p>
                 <button 
                   onClick={() => handleLocationSelect('campestre')}
                   className={`w-full font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 ${
                     selectedLocation === 'campestre' 
                       ? 'bg-[#FFE082] text-[#8B5A96] border-2 border-[#8B5A96]' 
-                      : 'bg-[#8B5A96] hover:bg-[#7a4f85] text-white'
+                      : 'bg-[#FFE082] hover:bg-[#FFE082] text-[#8B5A96]'
                   }`}
                 >
                   {selectedLocation === 'campestre' ? 'Ocultar mapa' : 'Ver en mapa'}
@@ -450,8 +450,8 @@ export default function FinalCta() {
                 className="mx-auto mb-6"
               />
               
-              <h4 className="font-montserrat-heavy text-xl font-bold text-white mb-8">
-                SELECCIONA PARA VER EL MAPA
+              <h4 className="font-montserrat-heavy text-3xl font-bold text-[#FFE082] mb-8 relativez-20 animate-heartbeat">
+                UBICA TU LATIDO
               </h4>
               
               {/* Cards con efectos glassmorphism */}

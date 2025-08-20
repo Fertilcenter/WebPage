@@ -47,12 +47,12 @@ export default function Credibility() {
                   className="animate-heartbeat"
                 />
               </div>
-              <p className="mt-12 text-lg font-bold text-[#8B5A96] text-center">
+              <p className="mt-12 text-3xl font-bold text-[#8B5A96] text-center">
                 + DE 2 MIL LATIDOS<br />NOS RESPALDAN
               </p>
             </div>
 
-            <p className="font-montserrat-heavy font-extrabold text-[#F0C260] text-2xl leading-tight text-left md:text-3xl md:h-1/2">
+            <p className="font-montserrat-heavy font-extrabold text-[#F0C260] text-4xl leading-tight text-left">
               EN FERTILCENTER<br />
               <span className="text-[#8B5A96]">ENTENDEMOS CADA</span>
               <br />LATIDO DE TU SUEÑO
@@ -197,7 +197,7 @@ export default function Credibility() {
                 </div>
               </div>
               <div className="mt-6 bg-yellow-200/20 backdrop-blur-xl rounded-2xl px-6 py-4 shadow-xl transform  transition-all duration-300">
-              <span className="text-[#FFE5B4] font-black text-lg drop-shadow-md">
+              <span className="text-[#FFE082] font-black text-lg drop-shadow-md">
               15 AÑOS CREANDO LATIDOS               
               </span>
             </div>
