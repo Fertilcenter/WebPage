@@ -28,8 +28,8 @@ export default function CookieConsent() {
     }
     
     // Controlar analíticas según estado actual
-    if (!optionalEnabled && process.env.NEXT_PUBLIC_GA_ID) {
-      window['ga-disable-' + process.env.NEXT_PUBLIC_GA_ID as string] = true;
+    if (!optionalEnabled) {
+      window['ga-disable-G-J0MMZ8S5J0'] = true;
     }
   }, [optionalEnabled]);
 
@@ -38,8 +38,8 @@ export default function CookieConsent() {
     localStorage.setItem("cookieOptional", optionalEnabled ? "true" : "false");
     setVisible(false);
     // Permitir analíticas si acepta opcionales
-    if (optionalEnabled && process.env.NEXT_PUBLIC_GA_ID) {
-      window['ga-disable-' + process.env.NEXT_PUBLIC_GA_ID as string] = false;
+    if (optionalEnabled) {
+      window['ga-disable-G-J0MMZ8S5J0'] = false;
     }
   };
 

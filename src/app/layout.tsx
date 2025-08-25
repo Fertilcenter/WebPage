@@ -76,18 +76,17 @@ export default function RootLayout({
         <meta name="author" content="Fertilcenter" />
         <meta name="robots" content="index,follow" />
         {/* Google Tag (gtag.js) - GA4 */}
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <Script
-            id="ga-script"
-            strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-          />
-        )}
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <Script id="ga-inline" strategy="afterInteractive">{`
-            window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-          `}</Script>
-        )}
+        <Script
+          id="ga-script"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-J0MMZ8S5J0"
+        />
+        <Script id="ga-inline" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-J0MMZ8S5J0');
+        `}</Script>
         {/* Google Tag Manager (opcional si usas GTM en vez de gtag directo) */}
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <Script id="gtm-script" strategy="afterInteractive">{`
