@@ -12,7 +12,7 @@ export default function Carousel() {
   // Contenido premium para clínica de fertilidad de clase mundial
   const slides = [
     {
-      src: "/images/fam.jpg",
+      src: "/images/medicoss.webp",
       alt: "Nuevo bebé",
       category: "ÉXITO",
       title: "Familias creadas",
@@ -176,7 +176,7 @@ export default function Carousel() {
                     src={currentSlide.src}
                     alt={currentSlide.alt}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 50vw"
                     className="object-cover transition-all duration-800"
                     loading={currentIndex === 0 ? "eager" : "lazy"}
                     priority={currentIndex === 0}
@@ -210,6 +210,7 @@ export default function Carousel() {
                   className="object-cover"
                   loading={currentIndex === 0 ? "eager" : "lazy"}
                   priority={currentIndex === 0}
+
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 
