@@ -71,7 +71,7 @@ export default function Hero() {
             aria-hidden
           />
           <Image
-            src="/images/mujer.png"
+            src="/images/mujer.webp"
             alt="Mujer reflexionando sobre su sueño de ser madre"
             width={450}
             height={600}
