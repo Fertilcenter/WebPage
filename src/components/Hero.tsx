@@ -50,7 +50,7 @@ export default function Hero() {
         <div className="flex-1 flex justify-center items-end relative lg:hidden">
           <div className="relative w-[320px] sm:w-[360px]">
             <Image
-              src="/images/mujer.png"
+              src="/images/mujer.webp"
               alt="Mujer reflexionando sobre su sueño de ser madre"
               width={450}
               height={600}
