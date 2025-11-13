@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative bg-gradient-to-r from-[#8B5A96] to-[#7d4fa3] min-h-[75vh] lg:min-h-[85vh] flex items-center overflow-hidden pt-20"
+      className="relative bg-gradient-to-r from-[#8B5A96] to-[#7d4fa3] min-h-[75vh] lg:min-h-[85vh] flex items-center overflow-hidden pt-20 touch-pan-y no-scroll-anchor"
     >
       {/* CONTENIDO (texto + imagen móvil) */}
       <div className="relative z-20 w-full max-w-4xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -26,7 +26,7 @@ export default function Hero() {
             SABEMOS CÓMO
             <br />
             {/* Corazón decorativo centrado detrás del título */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0">
+            <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0">
               <Image
                 src="/images/corazon_completo.png"
                 alt=""

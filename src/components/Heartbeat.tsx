@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Heartbeat() {
   return (
-    <section className="font-montserrat-heavy relative md:text-left md:bg-none md:px-4 md:mt-20">
+    <section className="font-montserrat-heavy relative md:text-left md:bg-none md:px-4 md:mt-20 touch-pan-y no-scroll-anchor">
       <div className="max-w-6xl md:w-[90%] mx-auto md:px-0">
         {/* Título principal con ícono */}
         <div className="text-center md:mt-8">
@@ -98,10 +98,10 @@ export default function Heartbeat() {
         </div>
 
         {/* Versión Móvil - NUEVA IMPLEMENTACIÓN */}
-        <div className="md:hidden relative overflow-hidden p-2">
+  <div className="md:hidden relative overflow-hidden p-2">
           
           {/* Imagen decorativa de fondo */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-50">
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-50">
             <Image
               src="/images/mujer_2x.webp"
               alt="Decorativo"

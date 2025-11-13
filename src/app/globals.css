@@ -211,3 +211,7 @@ header[class*="fixed"] {
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
+
+.no-scroll-anchor {
+  overflow-anchor: none;
+}
