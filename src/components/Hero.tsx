@@ -54,7 +54,7 @@ export default function Hero() {
               alt="Mujer reflexionando sobre su sueño de ser madre"
               width={450}
               height={600}
-              className="object-contain object-bottom select-none hover:scale-105 transition-transform duration-300 w-full h-auto"
+              className="pointer-events-none object-contain object-bottom select-none transition-transform duration-300 w-full h-auto lg:hover:scale-105"
               priority
               style={{ filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))' }}
             />

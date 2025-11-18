@@ -128,7 +128,7 @@ export default function Heartbeat() {
             
             {/* Cards con efectos glassmorphism */}
             <div className="font-montserrat-heavy space-y-3 p-4">
-              <div className="bg-white/20 backdrop-blur-xs rounded-2xl p-4 shadow-xl animate-slide-up delay-100 transform hover:scale-105 transition-all duration-300">
+              <div className="bg-white/20 backdrop-blur-xs rounded-2xl p-4 shadow-xl animate-slide-up delay-100 transform md:hover:scale-105 transition-all duration-300">
                 <div className="flex items-center justify-center space-x-3">
                   <div className="text-3xl w-12 h-12 flex items-center justify-center drop-shadow-lg">⏰</div>
                   <div className="text-left flex-1">
@@ -138,7 +138,7 @@ export default function Heartbeat() {
                 </div>
               </div>
               
-              <div className="bg-white/20 backdrop-blur-xs rounded-2xl p-4 shadow-xl animate-slide-up delay-100 transform hover:scale-105 transition-all duration-300">
+              <div className="bg-white/20 backdrop-blur-xs rounded-2xl p-4 shadow-xl animate-slide-up delay-100 transform md:hover:scale-105 transition-all duration-300">
                 <div className="flex items-center justify-center space-x-3">
                   <div className="text-3xl w-12 h-12 flex items-center justify-center drop-shadow-lg">😔</div>
                   <div className="text-left flex-1">
@@ -148,7 +148,7 @@ export default function Heartbeat() {
                 </div>
               </div>
               
-              <div className="bg-white/20 backdrop-blur-xs rounded-2xl p-4 shadow-xl animate-slide-up delay-100 transform hover:scale-105 transition-all duration-300">
+              <div className="bg-white/20 backdrop-blur-xs rounded-2xl p-4 shadow-xl animate-slide-up delay-100 transform md:hover:scale-105 transition-all duration-300">
                 <div className="flex items-center justify-center space-x-3">
                   <div className="text-3xl w-12 h-12 flex items-center justify-center drop-shadow-lg">💔</div>
                   <div className="text-left flex-1">
