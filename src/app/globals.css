@@ -81,9 +81,6 @@ button, input, textarea, select {
 img {
   max-width: 100%;
   height: auto;
-  /* Optimización de imágenes */
-  content-visibility: auto;
-  contain: layout;
 }
 
 /* Asegurar que elementos fixed funcionen correctamente */
@@ -213,5 +210,11 @@ header[class*="fixed"] {
 .delay-400 { animation-delay: 0.4s; }
 
 .no-scroll-anchor {
-  overflow-anchor: none;
+  overflow-anchor: auto;
+}
+
+@media (min-width: 768px) {
+  .no-scroll-anchor {
+    overflow-anchor: none;
+  }
 }
